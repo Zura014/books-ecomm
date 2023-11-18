@@ -1,37 +1,76 @@
 <header
-  class="mx-auto max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl lg:bg-transparent"
+  class="mx-auto max-w-screen-full sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl lg:bg-transparent"
 >
-  <nav 
-  class="w-full flex justify-between items-center px-12 py-2 relative"
-    >
+  <nav class="w-full flex justify-between items-center px-2 sm:px-12 py-2 relative">
     <div class="flex justify-center items-center">
-        <div class="sm:px-8">
-            <a href="#">
-                <img src="../../../assets/Logos/Ebooks-Color.svg" class="rounded-lg pointer sm-w-40 md:w-44 lg:w-48 xl:w-52 " />
-            </a>
-        </div>
-    </div>
-    <div class="hidden md:flex justify-center items-center">
-        <ul class="flex justify-between gap-x-24 px-12 items-center">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Marketplace</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </div>
-    <div class="flex justify-between gap-x-12 px-12 items-center">
-        <a 
-          href="#" 
-          class="py-2 px-6 font-semibold bg-[#f36c33] text-white rounded-lg border border-[#f36c33] duration-500 hover:duration-500 hover:text-[#f36c33] hover:border hover:border-[#f36c33] hover:bg-white"
-          >
-          Sign In
+      <div class="sm:px-2">
+        <a href="#">
+          <img
+            src="../../../assets/Logos/Ebooks-Color.svg"
+            class="pointer w-52 h-24"
+          />
         </a>
-        <a
-          href="#" 
-          class="py-2 px-6 font-semibold bg-[#f36c33] text-white rounded-lg border border-[#f36c33] duration-500 hover:duration-500 hover:text-[#f36c33] hover:border hover:border-[#f36c33] hover:bg-white"
-          >
-          Sign Up
-        </a>
+      </div>
     </div>
+    <div class="hidden lg:flex justify-center items-center">
+      <ul
+        class="flex justify-between gap-x-10 xl:gap-x-24 px-3 xl:px-6 items-center"
+      >
+        <li><a href="#" class="hover:text-[#f36c33] duration-300 ease-in-out">Home</a></li>
+        <li><a href="#" class="hover:text-[#f36c33] duration-300 ease-in-out">Marketplace</a></li>
+        <li><a href="#" class="hover:text-[#f36c33] duration-300 ease-in-out">Categories</a></li>
+        <li><a href="#" class="hover:text-[#f36c33] duration-300 ease-in-out">About Us</a></li>
+      </ul>
+    </div>
+    <div
+      class="hidden lg:flex justify-between gap-x-8 px-3 xl:px-6 items-center"
+    >
+      <a
+        href="#"
+        class="py-2 px-6 bg-[#f36c33] text-white ease-in-out rounded-lg border border-[#f36c33] duration-500 hover:duration-500 hover:text-[#f36c33] hover:border hover:border-[#f36c33] hover:bg-white"
+      >
+        Sign In
+      </a>
+      <a
+        href="#"
+        class="py-2 px-6 bg-[#f36c33] text-white ease-in-out rounded-lg border border-[#f36c33] duration-500 hover:duration-500 hover:text-[#f36c33] hover:border hover:border-[#f36c33] hover:bg-white"
+      >
+        Sign Up
+      </a>
+    </div>
+
+    <div class="lg:hidden flex px-3 justify-center items-center">
+      <button
+        class="hamburger flex scale-125"
+        (click)="toggleBM()"
+        [ngClass]="{ open: isClickedBM }"
+      >
+        <span class="hamburger-top"></span>
+        <span class="hamburger-mid"></span>
+        <span class="hamburger-btm"></span>
+      </button>
+    </div>
+    <div
+      class="scale-y-1 shadow-md z-20 origin-top text-black duration-500 absolute top-32 w-[90%] left-1/2 -translate-x-1/2 text-center"
+      [ngClass]="{ 'scale-y-0': !isClickedBM }"
+    >
+      <ul
+        class="text-lg font-bold px-8 py-4 md:px-16 lg:px-28 flex flex-col justify-between items-center gap-4"
+      >
+        <li class="border-b-2 w-full py-2 border-[#f36c33]">
+          <a href="#">{{ "home" | titlecase }}</a>
+        </li>
+        <li class="border-b-2 w-full py-2 border-[#f36c33]">
+          <a href="#">{{ "marketplace" | titlecase }}</a>
+        </li>
+        <li class="border-b-2 w-full py-2 border-[#f36c33]">
+          <a href="#">{{ "categories" | titlecase }}</a>
+        </li>
+        <li class="border-b-2 w-full py-2 border-[#f36c33]">
+          <a href="#">{{ "about us" | titlecase }}</a>
+        </li>
+      </ul>
+    </div>
+
   </nav>
 </header>
