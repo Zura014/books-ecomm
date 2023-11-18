@@ -5,4 +5,28 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    height: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(243, 110, 53, 0.8);
+    border-radius: 10px;
+    border:none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: #EEE;
+    border:none;
+}
+
+::-webkit-scrollbar-track {
+    background: #EEE;
+    border-radius: 10px;
+    border:none;
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: #EEE;
+    border:none;
 }
