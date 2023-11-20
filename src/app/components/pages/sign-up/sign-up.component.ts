@@ -8,16 +8,15 @@ import { Component } from '@angular/core';
 export class SignUpComponent {
   
   constructor(){
-    this.generateYears()
   }
 
   inputPass: string = "";
   inputConfirmPass: string = "";
-  yearsArr: number[] = [];
 
-  generateYears(){
-    for (let year = 2023; year >= 1900; year--) {
-        this.yearsArr.push(year);
+  validatePass(){
+    if(this.inputPass != this.inputConfirmPass){
+      this.inputConfirmPass;
     }
+
   }
 }
